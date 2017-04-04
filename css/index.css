@@ -7,3 +7,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
+section {
+    background-color: #31374f;
+}
+.intro-img {
+    background: url("../img/hi.png") no-repeat center top/contain;
+    height: 400px;
+    margin: 0 auto auto auto;
+    width: 88%;
+}
