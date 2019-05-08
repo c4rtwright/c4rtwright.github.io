@@ -1,18 +1,21 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-html, body {
+body {
     margin: 0;
-    padding: 0;
+    font-family: sans-serif;
 }
-section {
-    background-color: #31374f;
+.hero {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+
+    background: url('img/hero-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
 }
-.intro-img {
-    background: url("../img/hi.png") no-repeat center top/contain;
-    height: 400px;
-    margin: 0 auto auto auto;
-    width: 88%;
+.hero h1 {
+    font-size: 5em;
+    margin: 0 auto .5em auto;
 }
