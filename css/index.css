@@ -5,17 +5,37 @@ body {
 .hero {
     width: 100vw;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    
     text-align: center;
-
     background: url('../img/hero-bg.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
-.hero h1 {
-    font-size: 5em;
-    margin: 0 auto .5em auto;
+.columns .column:first-child figure {
+    text-align: center;
+}
+.intro-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 4em;
+    margin: 0 auto 0.5em auto;
+    text-align: center;
+    width: 70%;
+}
+.columns .intro-text > div {
+    width: 95%;
+}
+.columns .intro-text > div > p:first-child {
+    margin-top: 0;
+}
+.columns .intro-text > div > p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.35em;
+    margin: 1.49em auto auto auto;
+}
+.horiz {
+    /* background-color: #333333; */
+    background: rgb(232,0,0);
+    background: linear-gradient(90deg, rgba(232,0,0,1) 8%, rgba(0,0,0,1) 50%, rgba(242,0,0,1) 92%);
+    border-radius: 10em;
 }
