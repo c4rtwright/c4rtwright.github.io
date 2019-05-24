@@ -33,9 +33,13 @@
                                 <p>I’m a Full-Stack Web Developer with about seven years of professional experience working with 
                                 Javascript, PHP, and CSS, with the majority of my work being within the affiliate dating industry.</p> 
     
-                                <p>I love to design and develop tools and user interfaces for company-wide administrative
-                                tasks, as well as customer-facing landing pages and product features. </p>
+                                <p>My primary experience is in the design and development of tools and user interfaces for company-wide administrative
+                                processess, as well as customer-facing landing pages and product features. </p>
     
+                                <p> I thrive in environments that foster a diverse team, and I love to give (and receive) positive feedback,
+                                    whether it be for exemplary work or just turning team members on to new tech that's fun to use, and can make a tangible impact on the codebase.
+                                </p>
+
                                 <p>A positive attitude is paramount in the makeup of a great programmer, and I pride myself on 
                                 my 'never say die' attitude when it comes to anything a client (or management) throws my way.</p>
                             </div>
@@ -43,7 +47,121 @@
                     </div>
                 </div>
             </section>
+            <section class="section skillset-demo">
+                <div class="skillset container">
+                    <div>
+                        <header class="intro-header">
+                            <p>
+                                What are you into?
+                            </p>
+                            <hr class="horiz">
+                        </header>
+                    </div>
+                    <div class="skills-lists" id="skills">
+                        <h1 class="subtitle is-5">These are the technologies in which I would consider myself quite well-versed:</h1>
+                        <div class="skill-tabs">
+                            <span 
+                              v-on:click="displaySkillset($event, item)" 
+                              v-for="item in skilltabs"
+                            >
+                                {{item}}
+                            </span>
+                        </div>
+                        <div class="skill-pane front-end-skillset" v-if="currentTab == 'front-end'">
+                            <dl class='html'>
+                                <dt>
+                                    html5 (+ template engines)
+                                </dt>
+                                <dd>smarty</dd>
+                                <dd>pug</dd>
+                                <dd>blade</dd>
+                            </dl>
+                            <dl class='javascript'>
+                                <dt>
+                                    javascript (+ frameworks)
+                                </dt>
+                                <dd>Vue.js</dd>
+                                <dd>jQuery UI</dd>
+                                <dd>jQuery Mobile</dd>
+                                <dd>Prototype.js</dd>
+                            </dl>
+                            <dl class='css'>
+                                <dt>
+                                    css3 (+ pre-processors)
+                                </dt>
+                                <dd>bulma</ddThese are>
+                                <dd>bootstrap</dd>
+                            </dl>
+                        </div>
+                        <div class="skill-pane back-end-skillset" v-if="currentTab == 'back-end'">
+                            <dl class='ci-tools'>
+                                <dt>
+                                    continuous integration tools
+                                </dt>
+                                <dd>Jenkins</dd>
+                                <dd>CircleCI</dd>
+                                <dd>Grunt.js</dd>
+                                <dd>Sentry</dd>
+                            </dl>
+                            <dl class='php'>
+                                <dt>
+                                    PHP                                
+                                </dt>
+                                <dd>Laravel 5.2+</dd>
+                                <dd>CakePHP 3.x</dd>
+                            </dl>
+                            <dl class='node'>
+                                <dt>
+                                    Node.JS 
+                                </dt>
+                                <dd>Express.JS</dd>
+                                <dd>LoopBack 3.x</dd>
+                            </dl>
+                            <dl class='databases'>
+                                <dt>
+                                    Databases
+                                </dt>
+                                <dd>MySQL</dd>
+                                <dd>PostgreSQL</dd>
+                            </dl>
+                            <dl class='server'>
+                                <dt>
+                                    Web Server
+                                </dt>
+                                <dd>NGINX</dd>
+                            </dl>
+                        </div>
+                        <div class="skill-pane org-skillset" v-if="currentTab == 'organizational'">
+                            <dl class='collaboration'>
+                                <dt>
+                                    collaboration
+                                </dt>
+                                <dd>Github</dd>
+                                <dd>JIRA</dd>
+                                <dd>Confluence</dd>
+                                <dd>iMeet Central</dd>
+                            </dl>
+                            <dl class='bi-software'>
+                                <dt>
+                                    BI Software
+                                </dt>
+                                <dd>Periscope Data</dd>
+                            </dl>        
+                            <dl class='help-desk'>
+                                <dt>
+                                    Customer Service
+                                </dt>
+                                <dd>Kayako</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class='skills-note'>
+                        <p>* I try to expand upon these lists every day.</p>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="js/vue/vue.min.js"></script>
+<script src="js/index.js"></script>
