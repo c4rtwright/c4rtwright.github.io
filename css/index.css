@@ -2,40 +2,103 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+dt {
+    font-weight: bold;
+}
+dl, dd {
+    font-size: .9rem;
+}
 .hero {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover fixed;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
     text-align: center;
-    background: url('../img/hero-bg.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    width: 100vw;
 }
 .columns .column:first-child figure {
     text-align: center;
 }
 .intro-header {
+    color: #000000;
     font-family: 'Lato', sans-serif;
-    font-size: 4em;
-    margin: 0 auto 0.5em auto;
+    font-size: 3.5em;
+    margin: .8em auto .8em auto;
     text-align: center;
+    text-transform: capitalize;
     width: 70%;
 }
-.columns .intro-text > div {
+.columns .intro-text div {
     width: 95%;
 }
-.columns .intro-text > div > p:first-child {
+.columns .intro-text div > p:first-child {
     margin-top: 0;
 }
-.columns .intro-text > div > p {
+.columns .intro-text div > p {
+    color: #000000;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.35em;
+    font-size: 1.3em;
     margin: 1.49em auto auto auto;
 }
 .horiz {
-    /* background-color: #333333; */
     background: rgb(232,0,0);
     background: linear-gradient(90deg, rgba(232,0,0,1) 8%, rgba(0,0,0,1) 50%, rgba(242,0,0,1) 92%);
     border-radius: 10em;
+    margin: 0 0 0 0;
+}
+
+.skills-lists, h1.subtitle {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.skill-tabs, .skill-pane {
+    display: flex;
+    margin: 2.13em auto auto auto;
+    justify-content: space-around;
+}
+
+.skill-tabs > span {
+    cursor: pointer;
+    font-size: 1.8em;
+    text-transform: capitalize;
+}
+.skill-tabs > span:not(.tab-active) {
+    color: grey;
+}
+.tab-active {
+    border-bottom: .05em solid rgba(26, 204, 204, 1);
+    color: #000000;
+}
+.skill-pane {
+    background-color: #E6EEF0;
+    border: .03em solid #090C13;
+    color: #000000;
+    padding: 1.5em;
+}
+.skill-pane dl > dd,
+.skill-pane dl > dt {
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.skill-pane dl > dt {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.66em;
+    margin: -.2em 0 .1em -.9em;
+    text-align: left;
+}
+.skill-pane dl > dd {
+    display: list-item;
+    font-size: 1.3em;
+}
+.skills-note {
+    margin: .36em 0 0 0;
+}
+.skills-note > p {
+    font-family: "Montserrat", sans-serif;
+    font-size: .9em;
+    text-align: center;
 }
