@@ -29,7 +29,7 @@ let skills = new Vue({
         this.$nextTick(() => {
             // Make sure the 'front-end' tab is selected on content ready
             // @TODO: I dont like this pattern; change when time permits
-            document.querySelector(`.skill-tabs `).classList.add("tab-active");
+            document.querySelector(`.skill-tabs span:first-child`).classList.add("tab-active");
         });
     }
 })
