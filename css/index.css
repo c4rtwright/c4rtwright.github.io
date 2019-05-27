@@ -102,3 +102,12 @@ dl, dd {
     font-size: .9em;
     text-align: center;
 }
+.portfolio .columns .column:first-child {
+    background: url("../img/portfolio/1.png") no-repeat top center/cover;
+}
+.portfolio .columns .column:nth-of-type(2) {
+    background: url("../img/portfolio/2.png") no-repeat top center/cover;
+}
+.portfolio .columns .column:nth-of-type(3) {
+    background: url("../img/portfolio/3.png") no-repeat top center/cover;
+}
