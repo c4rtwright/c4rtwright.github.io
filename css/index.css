@@ -17,6 +17,9 @@ dl, dd {
     text-align: center;
     width: 100vw;
 }
+.columns .column {
+    height: 300px;
+}
 .columns .column:first-child figure {
     text-align: center;
 }
@@ -49,7 +52,7 @@ dl, dd {
 }
 
 .skills-lists, h1.subtitle {
-    color: #000000
+    color: #000000;
     font-family: "Montserrat", sans-serif;
     text-align: center;
 }
