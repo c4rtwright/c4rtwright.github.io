@@ -1,4 +1,4 @@
-console.log("burnin'")
+console.log("<3")
 
 let skills = new Vue({
     el: '#skills',
@@ -25,7 +25,7 @@ let skills = new Vue({
             skills.currentTab = newTab;
         }
     },
-    mounted: function() {
+    created: function() {
         this.$nextTick(() => {
             // Make sure the 'front-end' tab is selected on content ready
             // @TODO: I dont like this pattern; change when time permits

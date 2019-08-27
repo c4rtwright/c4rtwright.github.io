@@ -8,6 +8,13 @@ dt {
 dl, dd {
     font-size: .9rem;
 }
+dl > dd {
+    display: list-item;
+	list-style-image: url('../img/sparkle.png')
+}
+.section.portfolio {
+	padding: .5rem;
+}
 .hero {
     align-items: center;
     background: url('../img/hero-bg.jpg') no-repeat center center/cover fixed;
@@ -16,6 +23,20 @@ dl, dd {
     justify-content: center;
     text-align: center;
     width: 100vw;
+}
+.intro-copy {
+    background: radial-gradient(circle, 
+    rgba(253,253,233,0.05) 10%, 
+    rgba(250,250,210,0.05) 30%, 
+    rgba(247,247,187,0.05) 60%, 
+    rgba(250,250,210,1) 90%
+    );
+}
+.skillset-demo {
+	background: linear-gradient(90deg, rgba(198,248,248,1) 0%, rgba(233,252,252,1) 15%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(233,252,252,1) 85%, rgba(198,248,248,1) 100%);
+}
+.portfolio {
+	background: linear-gradient(90deg, rgba(247,233,247,1) 0%, rgba(252,247,252,1) 15%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(252,247,252,1) 85%, rgba(247,233,247,1) 100%);
 }
 .portfolio .columns .column {
     height: 300px;
@@ -51,22 +72,48 @@ dl, dd {
     margin: 0 0 0 0;
 }
 
-.skills-lists, h1.subtitle {
-    color: #000000;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
+.front-end-skillset dl > dd,
+.back-end-skillset dl > dd,
+.org-skillset dl > dd {
+	padding: .22em 0 0 0;
+	font-size: 1.5em;
+	margin: .5em 0 1em 2.5em;
+	text-transform: capitalize;
 }
 
-.skill-tabs, .skill-pane {
-    display: flex;
-    margin: 2.13em auto auto auto;
-    justify-content: space-around;
+.skills-lists {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+}
+h1.subtitle {
+    text-align: center;
+}
+.skills-lists .columns .column:first-child {
+    border-right: 1px solid black;
+	font-size: 1.18em;
+}
+
+.front-end-skillset dl dt,
+.back-end-skillset dl dt,
+.org-skillset dl dt {
+    text-align: center;
+	font-size: 2.6em;
+	border-bottom: 1px solid rgba(0, 0, 0, .28);
+}
+
+.skill-tabs {
+	display: flex;
+    flex-direction: column;
+    justify-content: left;
+	position: sticky;
+	top: -1px;
 }
 
 .skill-tabs > span {
     cursor: pointer;
-    font-size: 1.8em;
+    font-size: 1.64em;
     text-transform: capitalize;
+	padding: 0 0 .34em 0;
 }
 .skill-tabs > span:not(.tab-active) {
     color: grey;
@@ -75,42 +122,14 @@ dl, dd {
     border-bottom: .05em solid rgba(26, 204, 204, 1);
     color: #000000;
 }
-.skill-pane {
-    background-color: #E6EEF0;
-    border: .03em solid #090C13;
-    color: #000000;
-    padding: 1.5em;
-}
-.skill-pane dl > dd,
-.skill-pane dl > dt {
-    text-transform: capitalize;
-    text-align: left;
-}
 
-.skill-pane dl > dt {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.66em;
-    margin: -.2em 0 .1em -.9em;
-    text-align: left;
-}
-.skill-pane dl > dd {
-    display: list-item;
-    font-size: 1.3em;
-}
-.skills-note {
-    margin: .36em 0 0 0;
-}
-.skills-note > p {
-    font-family: "Montserrat", sans-serif;
-    font-size: .9em;
-    text-align: center;
-}
 .portfolio .columns {
     margin: 0 0 .5em 0;
 }
 .portfolio .columns .column {
     margin: 0 0 .2em 0;
 }
+
 .portfolio .columns.row-one .column:first-child {
     background: url("../img/portfolio/1.png") no-repeat top center/cover;
 }
@@ -139,4 +158,14 @@ dl, dd {
 }
 .portfolio .columns.row-three .column:nth-of-type(3) {
     background: url("../img/portfolio/9.png") no-repeat top center/cover;
+}
+
+.portfolio .columns.row-four .column:nth-of-type(1) {
+    background: url("../img/portfolio/10.png") no-repeat top center/cover;
+}
+.portfolio .columns.row-four .column:nth-of-type(2) {
+    background: url("../img/portfolio/11.jpg") no-repeat top center/cover;
+}
+.portfolio .columns.row-four .column:nth-of-type(3) {
+    background: url("../img/portfolio/12.jpg") no-repeat top center/cover;
 }

@@ -51,113 +51,128 @@
                 <div class="skillset container">
                     <div>
                         <header class="intro-header">
-                            <p>
-                                What are you into?
-                            </p>
+                            <p>What are you into?</p>
                             <hr class="horiz">
                         </header>
                     </div>
                     <div class="skills-lists" id="skills">
-                        <h1 class="subtitle is-5">These are the technologies in which I would consider myself quite well-versed (this list only gets larger):</h1>
-                        <div class="skill-tabs">
-                            <span 
-                              v-on:click="displaySkillset($event, item)" 
-                              v-for="item in skilltabs"
-                            >
-                                {{item}}
-                            </span>
-                        </div>
-                        <div class="skill-pane front-end-skillset" v-if="currentTab == 'front-end'">
-                            <dl class='html'>
-                                <dt>
-                                    html5 (+ template engines)
-                                </dt>
-                                <dd>smarty</dd>
-                                <dd>pug</dd>
-                                <dd>blade</dd>
-                            </dl>
-                            <dl class='javascript'>
-                                <dt>
-                                    javascript (+ frameworks)
-                                </dt>
-                                <dd>Vue.js</dd>
-                                <dd>jQuery UI</dd>
-                                <dd>jQuery Mobile</dd>
-                                <dd>Prototype.js</dd>
-                            </dl>
-                            <dl class='css'>
-                                <dt>
-                                    css3 (+ pre-processors)
-                                </dt>
-                                <dd>bulma</ddThese are>
-                                <dd>bootstrap</dd>
-                            </dl>
-                        </div>
-                        <div class="skill-pane back-end-skillset" v-if="currentTab == 'back-end'">
-                            <dl class='ci-tools'>
-                                <dt>
-                                    continuous integration tools
-                                </dt>
-                                <dd>Jenkins</dd>
-                                <dd>CircleCI</dd>
-                                <dd>Grunt.js</dd>
-                                <dd>Sentry</dd>
-                            </dl>
-                            <dl class='php'>
-                                <dt>
-                                    PHP                                
-                                </dt>
-                                <dd>Laravel 5.2+</dd>
-                                <dd>CakePHP 3.x</dd>
-                            </dl>
-                            <dl class='node'>
-                                <dt>
-                                    Node.JS 
-                                </dt>
-                                <dd>Express.JS</dd>
-                                <dd>LoopBack 3.x</dd>
-                            </dl>
-                            <dl class='databases'>
-                                <dt>
-                                    Databases
-                                </dt>
-                                <dd>MySQL</dd>
-                                <dd>PostgreSQL</dd>
-                            </dl>
-                            <dl class='server'>
-                                <dt>
-                                    Web Server
-                                </dt>
-                                <dd>NGINX</dd>
-                            </dl>
-                        </div>
-                        <div class="skill-pane org-skillset" v-if="currentTab == 'organizational'">
-                            <dl class='collaboration'>
-                                <dt>
-                                    collaboration
-                                </dt>
-                                <dd>Github</dd>
-                                <dd>JIRA</dd>
-                                <dd>Confluence</dd>
-                                <dd>iMeet Central</dd>
-                            </dl>
-                            <dl class='bi-software'>
-                                <dt>
-                                    BI Software
-                                </dt>
-                                <dd>Periscope Data</dd>
-                            </dl>        
-                            <dl class='help-desk'>
-                                <dt>
-                                    Customer Service
-                                </dt>
-                                <dd>Kayako</dd>
-                            </dl>
+                        <h1 class="subtitle is-5">These are the technologies in which I would consider myself quite well-versed:</h1>
+                        <div class="columns">
+                            <div class="column is-one-third">
+                                <div class="skill-tabs">
+                                    <span 
+                                      v-on:click="displaySkillset($event, item)" 
+                                      v-for="item in skilltabs"
+                                    >
+                                        {{item}}
+                                    </span>
+                                </div>        
+                            </div>
+                            <div class="column">
+								<div class="front-end-skillset" v-if="currentTab == 'front-end'">
+									<dl class='html'>
+										<dt>HTML5 + Template Engines</dt>
+										<dd>smarty</dd>
+										<dd>pug</dd>
+										<dd>blade</dd>
+									</dl>
+									<dl class='javascript'>
+										<dt>
+											Javascript + Frameworks
+										</dt>
+										<dd>Vue.js</dd>
+										<dd>jQuery UI</dd>
+										<dd>jQuery Mobile</dd>
+										<dd>Prototype.js</dd>
+									</dl>
+									<dl class='css'>
+										<dt>
+											CSS3 + Frameworks + Pre-Processors
+										</dt>
+										<dd>Bulma</dd>
+										<dd>Bootstrap</dd>
+										<dd>Less</dd>
+									</dl>
+								</div>
+								<div class="back-end-skillset" v-if="currentTab == 'back-end'">
+									<dl class='ci-tools'>
+										<dt>
+											DevOps
+										</dt>
+										<dd>Jenkins</dd>
+										<dd>CircleCI</dd>
+										<dd>Grunt.js</dd>
+										<dd>Sentry</dd>
+									</dl>
+									<dl class='php'>
+										<dt>
+											PHP + Frameworks                          
+										</dt>
+										<dd>Laravel 5.2+</dd>
+										<dd>CakePHP 3.x</dd>
+									</dl>
+									<dl class='node'>
+										<dt>
+											Node.JS + Frameworks 
+										</dt>
+										<dd>Express.JS</dd>
+										<dd>LoopBack 3.x</dd>
+									</dl>
+									<dl class='databases'>
+										<dt>
+											Databases
+										</dt>
+										<dd>MySQL</dd>
+										<dd>PostgreSQL</dd>
+									</dl>
+									<dl class='server'>
+										<dt>
+											Web Servers
+										</dt>
+										<dd>NGINX</dd>
+									</dl>
+								</div>
+							 	<div class="org-skillset" v-if="currentTab == 'organizational'">
+									<dl class='collaboration'>
+										<dt>
+											Collaboration
+										</dt>
+										<dd>Github</dd>
+										<dd>JIRA</dd>
+										<dd>Confluence</dd>
+										<dd>iMeet Central</dd>
+									</dl>
+									<dl class='bi-software'>
+										<dt>
+											BI Software
+										</dt>
+										<dd>Periscope Data</dd>
+									</dl>        
+									<dl class='help-desk'>
+										<dt>
+											Customer Service
+										</dt>
+										<dd>Kayako</dd>
+									</dl>
+								</div>
+							</div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="section portfolio">
+				<div>
+					<header class="intro-header">
+						<p>Portfolio</p>
+						<h1 class="subtitle is-5">
+						    These are some of the projects and products I've worked on over the years.
+						</h1>
+						<h1 class="subtitle is-5">
+							Code samples can be found on <a href="https://github.com/c4rtwright">my Github profile.</a>
+						</h1>
+						<hr class="horiz"> 
+					</header>
+				</div>
                 <div>
                     <div class="columns row-one">
                         <div class="column"></div>
@@ -174,8 +189,19 @@
                         <div class="column"></div>
                         <div class="column"></div>
                     </div>
+					<div class="columns row-four">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
                 </div>
             </section>
+			<section class='section contact'>
+				<header class="intro-header">
+					<p>Would you like to know more?</p>
+					<h1 class="subtitle is-5">Feel free to contact me at <a href="#">m1ke.haynes@protonmail.com</a> if you'd like to get in touch.</h1>
+				</header>
+			</section>
         </main>
     </body>
 </html>
