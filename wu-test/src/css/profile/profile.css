@@ -1,0 +1,135 @@
+.more-menu > ul > li {
+	cursor: pointer;
+	padding-top: 2px;
+    padding-bottom: 2px;
+}
+.exp-summary,
+.edu-summary {
+	margin: 1em;
+}
+.edu, .exp {
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+	display: flex;
+	flex-flow: wrap;
+	margin: 2em 3em 3em 3em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.edu-info,
+.exp-info {
+	align-self: center;
+	margin: -.5em 0 0 1em;
+}
+.edu-school,
+.exp-company {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.report-profile {
+	color: #f20000;
+}
+.more-menu {
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 1em 0 0 -4em;
+    position: absolute;
+}
+.prof-container header {
+	margin: 0 0 .5em 0
+}
+.prof-summary,
+.prof-experience,
+.prof-education,
+.prof-achievements {
+	margin: 3em;
+}
+.prof-info {
+	display: flex;
+	flex-flow: row wrap;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 1em;
+}
+.prof-action > div {
+	margin: 0 .5em 0 0;
+}
+.more i,
+.edit i {
+	margin: 0 0 0 4px;
+}
+.prof-action {
+	display: flex;
+	margin: 0 auto auto auto;
+}
+.prof-thumb img {
+	border-radius: 9px;
+}
+.prof-thumb {
+	margin: auto 3em 1em 3em;
+}
+.prof-intro {
+	margin: 0 auto 1em auto;
+}
+.prof-container {
+	margin: 1em 0 1em 0;
+}
+section.jobs {
+	padding: 0;
+}
+.include .keyword,
+.exclude .keyword {
+	font-size: 1em;
+	padding-right: .2em;
+	color: #1acccc;
+	cursor: pointer;
+}
+
+.section-header {
+	border-bottom: 1px solid #000000;
+}
+.section-header h3 {
+	margin: 0 0 .3em 0;
+}
+.listing-actions {
+	margin: -2em auto -1em auto;
+}
+.opt-stack dl {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.job-res .columns:first-child {
+	flex-flow: row wrap;
+}
+.thumbnail img {
+	margin: 0 auto;
+}
+a.report-listing {
+	color: #f20000;
+	vertical-align: sub;
+	margin: 0 0 0 .5em;
+}
+.section {
+	padding: 1rem 1.5rem;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+}
+.profile {
+	background-color: #ffffff;
+	border: 1px solid #c8c8c8;
+	margin: 2em 2em 2em 2em;
+	padding: 1em 1em 1em 1em;
+}
+.navbar-brand a.navbar-item:first-child {
+	font-size: 2em;
+	font-family: "Lato", sans-serif;
+}
+.profile header {
+	display: flex;
+	flex-direction: column;
+}
+.profile header a, .results header a {
+	font-size: 1.2em;
+	margin: -.75em 0 .55em 0;
+}
