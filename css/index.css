@@ -41,6 +41,12 @@ dl > dd {
 .portfolio .columns .column {
     height: 300px;
 }
+.portfolio .warning {
+	font-size: .5em;
+}
+.portfolio-blur {
+    filter: blur(10px);
+}
 .columns .column:first-child figure {
     text-align: center;
 }

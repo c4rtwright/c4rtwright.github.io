@@ -1,5 +1,13 @@
 console.log("<3")
 
+document.querySelector('.unblur').addEventListener('click', function(){
+	console.log("unblur the porfolio!");
+	document.querySelectorAll('.portfolio .columns .column').forEach((element, index) => {
+		console.log(element)
+		element.classList.remove('portfolio-blur')
+	})
+})
+
 let skills = new Vue({
     el: '#skills',
     data: {
