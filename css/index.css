@@ -43,6 +43,7 @@ dl > dd {
 }
 .portfolio .warning {
 	font-size: .5em;
+	text-transform: none;
 }
 .portfolio-blur {
     filter: blur(10px);
