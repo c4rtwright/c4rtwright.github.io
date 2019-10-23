@@ -12,6 +12,10 @@ dl > dd {
     display: list-item;
 	list-style-image: url('../img/sparkle.png')
 }
+.section {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
 .section.portfolio {
 	padding: .5rem;
 }
