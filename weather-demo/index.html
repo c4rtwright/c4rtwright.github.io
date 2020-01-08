@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>Weather App Demo</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet"> 
+		<link href="weather.css" rel="stylesheet">
+	</head>
+	<body>
+		<section id="app" class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-two-thirds weather-side">
+						<header>
+							<p>the.weather</p>
+						</header>
+						<div class="weather-basic">
+							<div class="weather-info">
+								<p class="temp">{{currentWeatherData.temp}}&deg;</p>
+								<div class="loc-info">
+									<div class="location">
+										<h2 class="title is-2">{{searchLocation}}</h2>
+										<div class="time-date">
+											<span class="time">2:00 - </span>
+											<span class="date">Wednesday, 22 Oct '19</span>
+										</div>
+									</div>    	
+								</div>
+								<div class="weather-descrip">
+									<div class="descrip-icon">
+										<i class="fas fa-sun"></i>
+									</div>
+									<p class="descrip">{{currentWeatherData.description}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column details-side">
+						<div class="location-search">
+							<div class="field">
+								<div class="control">
+									<input class="input loc-value" type="text" placeholder="Another Location" v-on:keyup.enter="checkWeatherData(event)">
+									<p class="help">Put in a city name (e.g.: Stockton)</p>
+								</div>
+							</div>
+							<div class="search" v-on:click="checkWeatherData(event)">
+								<i class="fas fa-search"></i>
+							</div>
+						</div>
+						<div class="searched-locs">
+							<div class="loc" v-for="location in searchedLocations">
+								<p>{{location}}
+									<i class="fas fa-times"></i>
+								</p>
+							</div>
+						</div>
+						<div class="weather-details">
+							<header>
+								<p>Weather Details</p>    
+							</header>
+							<div class="detail">
+								<span class="det-key">Clouds</span>
+								<span class="cloud">{{currentWeatherData.clouds}}</span>
+							</div>
+							<div class="detail">
+								<span class="det-key">Humidity</span>
+								<span class="humidity">{{currentWeatherData.humidity}}</span>
+							</div>
+							<div class="detail">
+								<span class="det-key">Wind</span>
+								<span class="wind">{{currentWeatherData.wind}}</span>
+							</div>
+							<div class="detail">
+								<span class="det-key">Percipitation</span>
+								<span class="rain">--</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			err: undefined,
+			currentWeatherData: {
+				description: '--',
+				wind: '--',
+				humidity: '--',
+				percip: '--',
+				clouds: '--',
+				temp: '--'
+			},
+			searchedLocations: [],
+			searchLocation: '- -'
+		},
+		methods: {
+			checkWeatherData(event) {
+				let location = document.querySelector('.loc-value').value;
+				vm.searchLocation = location;
+				console.log(location);
+				
+				// Clear search box after getting loc
+				document.querySelector('.loc-value').value = '';
+				
+				// Shout out to OpenWeatherMap
+				axios.get('https://api.openweathermap.org/data/2.5/weather', {
+					params: {
+					  appid: '660a732c0fcd21ecb9ff9a2d7707408d',
+					  units: 'imperial',
+					  q: `${location},us`
+					}
+				  })
+				  .then(function (response) {
+					if (response.data) {
+						vm.currentWeatherData.temp = Math.floor(response.data.main.temp);
+						vm.currentWeatherData.description = response.data.weather[0].main;
+						vm.currentWeatherData.clouds = `${response.data.clouds.all}%`;
+						vm.currentWeatherData.wind = `${response.data.wind.speed} mi./hr`;
+						vm.currentWeatherData.humidity = `${response.data.main.humidity}%`;
+					}
+					console.log(response.data);
+				  })
+				  .catch(function (error) {
+					vm.err = true; // Error hit
+					console.log(error);
+				  })
+				  .finally(function () {
+					console.log("<33")
+					vm.searchedLocations.push(location)
+					// always executed
+				  });
+			}
+		}
+	})  
+</script>
