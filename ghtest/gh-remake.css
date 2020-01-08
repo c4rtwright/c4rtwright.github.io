@@ -1,0 +1,123 @@
+html {
+	font-size: 16px;
+}
+.intro-head {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80em;
+	border: 1px solid black;
+}
+.intro-head > header {
+	text-align: center;
+}
+.intro-head > header > p {
+	font-family: 'Raleway', sans-serif;
+	align-self: end;
+	text-transform: uppercase;
+	align-self: flex-end;
+}
+.intro-head > header > .title.is-1 {
+	font-family: 'Playfair Display', sans-serif;
+	font-size: calc(9vw - 1em);
+	margin-bottom: 4.5rem;
+}
+.intro-head > header > .subtitle {
+	font-family: 'Dancing Script', sans-serif;
+	font-size: calc(3vw - .5em);
+	text-align: center;
+	padding: 0 1em 0 1em;
+}
+.intro {
+	margin: auto auto auto 4rem;
+}
+.stat > span:first-child {
+	font-family: "Dancing Script", sans-serif;
+}
+.stat-col {
+	display: flex;
+	justify-content: space-evenly;
+}
+.stat-col > div {
+	text-align: center;
+}
+hr {
+	background-color: #000000;
+}
+.stat > hr {
+	margin: 0 auto .5em auto;
+	width: 70%;
+}
+.stat > span:last-child {
+	font-family: "Playfair Display", sans-serif;
+}
+.stat {
+	margin: 1em 0 2em 0;
+}
+.main {
+	display: flex;
+	margin: 2em auto auto auto;
+	width: 80%;
+}
+.main .copy  {
+	margin: 0 0 0 1em;
+}
+.left-box {
+	font-family: "Playfair Display", sans-serif;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.left-box > p:last-child {
+	font-size: 2em;
+}
+.copy {
+	margin: auto auto auto 1em;
+}
+.copy > p {
+	font-size: .9em;
+	line-height: 25px;
+}
+.explore > header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: auto auto 1em auto;
+}
+.explore > header hr {
+	width: 25%;
+}
+.explore > header > p {
+	font-size: 1.5em;
+	margin: 0 17px 0 17px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.explore {
+	margin: 2em auto auto auto;
+	width: 80%;
+}
+.explr-box {
+	display: flex;
+}
+.explr-box i {
+	align-self: center;
+	font-size: 3em;
+	margin: 0 .25em 0 0;
+	width: 20vw;
+}
+.explr-cont {
+	padding-right: 8px;
+	border-right: 1px dashed #000;
+}
+.explr-cont > .title {
+	margin: 0 0 .25em 0;
+}
+.explr-cols > .columns {
+	justify-content: space-evenly;
+}
+.explr-cols > .columns > .column:last-of-type > .explr-box > .explr-cont {
+	border-right: none;
+}
